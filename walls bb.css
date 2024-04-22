@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+    animation: colorChange 3s infinite alternate;
+}
+
+h2 {
+    margin-top: 0;
+    animation: scaleIn 1.5s ease-out;
+}
+
+nav {
+    background-color: #666;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    background-color: #999;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+h3::before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    transition: width 1s;
+    white-space: nowrap;
+}
+
+h3:hover::before {
+    width: 100%;
+}
+
+.colorChange {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    0% { color: black; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; 

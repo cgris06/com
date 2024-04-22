@@ -1,0 +1,187 @@
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos específicos para las secciones */
+
+#introduccion {
+    background-color: #eee;
+    padding: 20px;
+}
+
+#phalaenopsis {
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+#cattleya {
+    background-color: #eee;
+    padding: 20px;
+}
+
+#dendrobium {
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+#vanda {
+    background-color: #eee;
+    padding: 20px;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+img[src="phalaenopsis.jpg"] {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    animation: fadeIn 1s ease-out; /* Aplica la animación solo a la primera imagen */
+}
+@keyframes invertColors {
+    0% {
+        filter: invert(0%); /* Sin invertir los colores al inicio */
+    }
+    100% {
+        filter: invert(100%); /* Invertir completamente los colores al final */
+    }
+}
+
+img[src="cattleya.jpg"] {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    animation: invertColors 2s infinite alternate; /* Aplica la animación solo a la segunda imagen */
+}
+@keyframes exoticAnimation {
+    0% {
+        transform: scale(1) rotate(0deg); /* Escala y rotación normales al inicio */
+        filter: blur(0px); /* Sin desenfoque al inicio */
+    }
+    50% {
+        transform: scale(1.2) rotate(45deg); /* Escala aumentada y rotación a 45 grados a la mitad de la animación */
+        filter: blur(3px); /* Desenfoque máximo a la mitad de la animación */
+    }
+    100% {
+        transform: scale(1) rotate(0deg); /* Regresa a la escala y rotación normales al final */
+        filter: blur(0px); /* Sin desenfoque al final */
+    }
+}
+
+img[src="dendrobium.jpg"] {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    animation: exoticAnimation 3s ease-in-out infinite; /* Aplica la animación exótica solo a la tercera imagen */
+}
+@keyframes circleAnimation {
+    0% {
+        border-radius: 0; /* Comienza sin bordes redondeados */
+    }
+    100% {
+        border-radius: 50%; /* Termina con los bordes redondeados, formando un círculo */
+    }
+}
+
+img[src="vanda.jpg"] {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    animation: circleAnimation 3s ease-in-out forwards; /* Aplica la animación para formar un círculo a la última imagen */
+}
+@keyframes bubbleAnimation {
+    0% {
+        transform: translateY(0); /* Sin desplazamiento inicial */
+    }
+    50% {
+        transform: translateY(-10px); /* Desplazamiento hacia arriba */
+    }
+    100% {
+        transform: translateY(0); /* Vuelve a la posición inicial */
+    }
+}
+
+/* Pseudo-elemento para las burbujas */
+h1::after {
+    content: ''; /* Agrega un contenido vacío para el pseudo-elemento */
+    position: absolute; /* Lo posiciona de manera absoluta */
+    top: -20px; /* Posiciona las burbujas encima del texto */
+    left: 0; /* Alinea las burbujas con el texto */
+    width: 100%; /* Ancho igual al del texto */
+    height: 100%; /* Alto igual al del texto */
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.8) 20%, transparent 70%); /* Gradiente radial para simular las burbujas */
+    animation: bubbleAnimation 4s ease-in-out infinite; /* Aplica la animación de las burbujas */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del texto */
+}
+
+/* Estilos para el título */
+h1 {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    text-align: center; /* Alinea el texto al centro */
+    font-size: 36px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    margin-top: 50px; /* Espacio superior */
+    font-family: Arial, sans-serif; /* Fuente */
+    padding: 20px; /* Espaciado interno */
+    z-index: 1; /* Coloca el texto por encima del pseudo-elemento */
+}

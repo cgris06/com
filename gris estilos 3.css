@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+    font-family: "Verdana", "Geneva", sans-serif;
+    font-size: 50px;
+    color: #006;
+    border-style: outset;
+    text-align: center;
+    text-shadow: 5px 5px #CCC;
+}
+
+body {
+    background-image: url("fondo f.jpeg");
+    background-size: cover;
+}
+
+h3 {
+    font-family: "Verdana", "Geneva", sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+h2 {
+    font-family: "Verdana", "Geneva", sans-serif;
+    font-size: 33px;
+    text-align: center;
+}
+
+.sepia {
+    filter: invert(100%);
+}
+
+.circulo {
+    border-radius: 50%;
+}
+
+.neon {
+    text-shadow: 0px 0px 3px #FF0000, 0px 0px 5px #0000FF;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 36px;
+    color: red;
+}
+
+h2.fuego {
+    text-shadow: 0 0 20px #fefcc9, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+    color: #666;
+}
+
+h2.fuego:hover {
+    text-shadow: 0 0 20px #fefcc9;
+    color: red;
+}
+
+h2.contornear {
+    text-shadow: -1px 0 #090, 1px 0 #090, 0 1px #090, 0 -1px #090;
+    color: #fff;
+}
+
+h2.relieve {
+    text-shadow: 1px 1px BLACK, -1px -1px #333;
+    background-color: #ddd;
+    color: #ddd;
+    padding: 10px;
+}
+
+.arcoiris {
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+
+.polaroid {
+    background-color: white;
+    padding: 10px 10px 50px 10px;
+    border: 1px solid #BFBFBF;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.polaroid:hover {
+    transform: scale(1.1);
+}
